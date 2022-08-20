@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Componentes Form</title>
+</h:head>
+
+<h:body>
+    <h2>Ejemplo de componentes</h2>
+    <br/>
+    <p>
+        Elementos para un formulario
+    </p>
+    <br/>
+    <h:messages errorStyle="color : red" infoStyle="color:blue" globalOnly="true" />
+    <h:form id="formComponentes">
+        <h:inputText id="texto" value="#{formComponentesController.texto}" />
+        <br/>
+        <h:inputSecret id="password" value="#{formComponentesController.password}" />
+        <br/>
+        <h:inputTextarea id="mensaje" value="#{formComponentesController.mensaje}" />
+        <br/>
+        <h:selectBooleanCheckbox id="check" value="#{formComponentesController.check}" />
+        <br/>
+        <br/>
+        <h:selectOneMenu id="opcionLista" value="#{formComponentesController.opcionMenu}" >
+            <f:selectItems value="#{formComponentesController.listaOpciones}" />
+        </h:selectOneMenu>
+        <br/>
+        <br/>
+        <h:selectOneRadio id="opcionRadio" value="#{formComponentesController.opcionRadio}" >
+            <f:selectItems value="#{formComponentesController.listaOpciones}" />
+        </h:selectOneRadio>
+        <br/>
+        <br/>
+        <h:selectManyListbox id="manyLista" value="#{formComponentesController.manyLista}" >
+            <f:selectItems value="#{formComponentesController.listaOpciones}" />
+        </h:selectManyListbox>
+        <br/>
+        <br/>
+        <h:selectManyCheckbox id="manyCheck" value="#{formComponentesController.checkLista}" >
+            <f:selectItems value="#{formComponentesController.listaOpciones}" />
+        </h:selectManyCheckbox>
+        <br/>
+        <br/>
+        <h:selectOneMenu id="oneMenuDif"
+                         value="#{formComponentesController.opcionMenuDiferente}"
+                         hideNoSelectionOption="true">
+            <f:selectItem itemValue="#{null}" itemLabel="--Seleccione una opción --"
+                          noSelectionOption="true"/>
+            <f:selectItem itemValue="uno" itemLabel="Opción 1" />
+            <f:selectItem itemValue="dos" itemLabel="Opción 2" />
+            <f:selectItem itemValue="tres" itemLabel="Opción 3" />
+            <f:selectItem itemValue="cuatro" itemLabel="Opción 4" />
+        </h:selectOneMenu>
+
+        <br/>
+        <br/>
+        <h:selectOneMenu id="oneMenuMap"
+                         value="#{formComponentesController.oneMap}"
+                         hideNoSelectionOption="true">
+            <f:selectItem itemValue="#{null}" itemLabel="--Seleccione una opción --"
+                          noSelectionOption="true"/>
+            <f:selectItems value="#{formComponentesController.mapaOpciones.entrySet()}"
+                           var="entrada" itemValue="#{entrada.key}"
+                           itemLabel="#{entrada.value}" />
+        </h:selectOneMenu>
+
+        <br/>
+        <br/>
+        <h:commandButton id="enviarBtn" value="Enviar"
+                         action="#{formComponentesController.submit}" />
+    </h:form>
+</h:body>
+</html>

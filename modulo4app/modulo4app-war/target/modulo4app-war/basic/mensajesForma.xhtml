@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Etiquetado y mensajes</title>
+</h:head>
+
+<h:body>
+<p>
+    Etiquetado y mensajes en formularios
+</p>
+    <br/>
+    <br/>
+    <h:form id="formEtiquetasMensajes">
+        <fileset>
+            <legeng>Datos</legeng>
+            <section>
+                <h:outputLabel for="email" value="Correo electrónico:" />
+                <h:inputText id="email" value="#{mensajesController.email}" required="true" />
+                <h:message for="email" id="msjEmail" />
+            </section>
+            <section>
+                <h:outputLabel for="pass" value="Contraseña :" />
+                <h:inputSecret id="pass" value="#{mensajesController.password}"
+                               required="true" />
+                <h:message for="pass" id="msjPass" errorStyle="color:red"
+                           infoStyle="color:green" />
+            </section>
+            <footer>
+                <h:commandButton id="enviarBtn" value="Enviar"
+                                 action="#{mensajesController.enviar}" />
+                <h:message for="enviarBtn" id="msjEnviarBtn" />
+            </footer>
+        </fileset>
+    </h:form>
+
+</h:body>
+</html>

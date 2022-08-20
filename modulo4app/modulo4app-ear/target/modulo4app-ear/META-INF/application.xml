@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" version="7">
+  <display-name>modulo4app-ear</display-name>
+  <module>
+    <web>
+      <web-uri>modulo4app-war.war</web-uri>
+      <context-root>/modulo4app</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>modulo4app-ejb.jar</ejb>
+  </module>
+</application>
