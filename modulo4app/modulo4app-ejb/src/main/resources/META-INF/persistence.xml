@@ -3,9 +3,12 @@
 <persistence>
     <persistence-unit name="diplojavaDS" transaction-type="JTA">
         <jta-data-source>java:/diplojavaDS</jta-data-source>
+        <class>cic.javadiplo.appear.ejb.modelo.ProductoEnt</class>
 
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
         </properties>

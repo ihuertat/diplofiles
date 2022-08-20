@@ -19,9 +19,9 @@ public class MensajesController {
 //                FacesContext fc= FacesContext.getCurrentInstance();
 //                fc.addMessage("formEtiquetasMensajes:pass",mensaje);
 //                return null;
-                return "EXITO";
+                return "/basic/salida/paginaSalidaExito?faces-redirect=true";
             }else{
-                return "ERROR";
+                return "/basic/salida/paginaSalidaError?faces-redirect=true";
             }
             //throw new Exception("Excepción Simulada");
         }catch (Exception e){

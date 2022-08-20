@@ -1,4 +1,6 @@
 /home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/HolaMundoController.java
 /home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/MensajesController.java
+/home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/HoraController.java
+/home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/EchoController.java
 /home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/FormComponentesController.java
 /home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/CalculadoraController.java
