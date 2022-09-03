@@ -15,6 +15,34 @@ SET FOREIGN_KEY_CHECKS=0;
 --  PRIMARY KEY (`id`)
 -- ) AUTO_INCREMENT=11
 
+DROP TABLE IF EXISTS `diplojava`.`Usuario` ;
+CREATE TABLE IF NOT EXISTS `diplojava`.`Usuario`
+(
+	`id_usuario` VARCHAR(50) NOT NULL,
+	`password` VARCHAR(50) NULL,
+	`cifra` VARCHAR(256) NULL,
+	CONSTRAINT `PK_USUARIO` PRIMARY KEY (`id_usuario` ASC)
+)
+;
+
+DROP TABLE IF EXISTS `diplojava`.`Usuario_Rol` ;
+CREATE TABLE IF NOT EXISTS `diplojava`.`Usuario_Rol`
+(
+	`id_usuario` VARCHAR(50) NOT NULL,
+	`id_rol` SMALLINT NOT NULL,
+	CONSTRAINT `PK_USUARIO_ROL` PRIMARY KEY (`id_usuario` ASC, `id_rol` ASC)
+)
+;
+
+DROP TABLE IF EXISTS `diplojava`.`Rol` ;
+CREATE TABLE IF NOT EXISTS `diplojava`.`Rol`
+(
+	`id_rol` SMALLINT NOT NULL,
+	`descripcion` VARCHAR(50) NULL,
+	CONSTRAINT `PK_ID_ROL` PRIMARY KEY (`id_rol` ASC)
+)
+;
+
 -- -----------------------------------------------------
 -- Table `diplojava`.`Departamento`
 -- -----------------------------------------------------
@@ -91,12 +119,28 @@ INSERT INTO Departamento VALUES (3,"Departamento 3");
 INSERT INTO Departamento VALUES (4,"Departamento 4");
 INSERT INTO Departamento VALUES (5,"Departamento 5");
 
-INSERT INTO Empleado VALUES  (null, "EMPLEADO ALFA",10000,null,3);
-INSERT INTO Empleado VALUES (null, "EMPLEADO BETA",20000,null,2);
-INSERT INTO Empleado VALUES (null, "EMPLEADO GAMA",25000,null,2);
+INSERT INTO EMPLEADO VALUES  (null, "EMPLEADO ALFA",10000,null,3);
+INSERT INTO EMPLEADO VALUES (null, "EMPLEADO BETA",20000,null,2);
+INSERT INTO EMPLEADO VALUES (null, "EMPLEADO GAMA",25000,null,2);
 
 INSERT INTO EmpleadosProyecto VALUES(1,2);
 INSERT INTO EmpleadosProyecto VALUES(2,2);
 INSERT INTO EmpleadosProyecto VALUES(3,4);
+
+INSERT INTO Rol VALUES (1,'ROL1');
+INSERT INTO Rol VALUES (2,'ROL2');
+INSERT INTO Rol VALUES (3,'ROL3');
+
+/*-- Usuario */
+INSERT INTO Usuario VALUES ('ihuertat@gmail.com','ihuerta123','b5rQLeOcb90x7aTLWtcRvkgw+fgWn//wqrKA9p0YiIM=');
+INSERT INTO Usuario VALUES ('medico1@gmail.com','medico1','GKewyS6fQbCv7iftLATkkZJInwZImUD2FmHjqOQ9/t0=');
+INSERT INTO Usuario VALUES ('colaborador1@correo.com','medico1','GKewyS6fQbCv7iftLATkkZJInwZImUD2FmHjqOQ9/t0=');
+
+/*---usuario rol*/
+INSERT INTO Usuario_Rol VALUES ('ihuertat@gmail.com',1);
+INSERT INTO Usuario_Rol VALUES ('ihuertat@gmail.com',2);
+INSERT INTO Usuario_Rol VALUES ('medico1@gmail.com',2);
+INSERT INTO Usuario_Rol VALUES ('colaborador1@correo.com',3);
+
 
 commit;
