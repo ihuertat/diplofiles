@@ -50,10 +50,13 @@ public class CalculadoraController implements Serializable {
 
     public void realizarOperacion(){
         switch (tipoOperacion){
-            case SUMA -> setResultado(numero1 + numero2);
-            case RESTA -> setResultado(numero1 - numero2);
-            case MULTIPLICA -> setResultado(numero1 * numero2);
-            case DIVIDE ->{
+            case SUMA : setResultado(numero1 + numero2);
+                        break;
+            case RESTA : setResultado(numero1 - numero2);
+                        break;
+            case MULTIPLICA:  setResultado(numero1 * numero2);
+                            break;
+            case DIVIDE : {
               try{
                   setResultado(numero1 / numero2);
               }catch (Exception ex){

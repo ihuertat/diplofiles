@@ -91,9 +91,9 @@ INSERT INTO Departamento VALUES (3,"Departamento 3");
 INSERT INTO Departamento VALUES (4,"Departamento 4");
 INSERT INTO Departamento VALUES (5,"Departamento 5");
 
-INSERT INTO EMPLEADO VALUES  (null, "EMPLEADO ALFA",10000,null,3);
-INSERT INTO EMPLEADO VALUES (null, "EMPLEADO BETA",20000,null,2);
-INSERT INTO EMPLEADO VALUES (null, "EMPLEADO GAMA",25000,null,2);
+INSERT INTO Empleado VALUES  (null, "EMPLEADO ALFA",10000,null,3);
+INSERT INTO Empleado VALUES (null, "EMPLEADO BETA",20000,null,2);
+INSERT INTO Empleado VALUES (null, "EMPLEADO GAMA",25000,null,2);
 
 INSERT INTO EmpleadosProyecto VALUES(1,2);
 INSERT INTO EmpleadosProyecto VALUES(2,2);

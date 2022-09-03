@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html" encoding="UTF-8">
+
+    <h:head>
+        <title>Flujo2</title>
+        <h:outputStylesheet library="css" name="estilosapp.css" />
+    </h:head>
+
+    <h:body>
+        <h2 class="hola">Página intermedia del flujo</h2>
+        <br/>
+        <h:form>
+        <div>
+            <p:outputLabel for="texto2" value="Un texto "/>
+            <p:inputText id="texto2" value="#{flujoController.campoTexto2}"/>
+        </div>
+        <div>
+            <p:commandButton value="Anterior" action="flujoejemplo" />
+            <br/>
+            <p:commandButton value="Siguiente" action="paginaFinal" />
+        </div>
+        </h:form>
+    </h:body>
+</f:view>
+</html>

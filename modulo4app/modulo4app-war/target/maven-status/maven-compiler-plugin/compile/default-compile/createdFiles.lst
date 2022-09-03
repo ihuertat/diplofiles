@@ -1,7 +1,11 @@
+cic/javadiplo/appear/web/controller/FlujoController.class
 cic/javadiplo/appear/web/controller/jpa/ListaProductosController.class
+cic/javadiplo/appear/web/controller/proyecto/ListaEmpProyectoController.class
 cic/javadiplo/appear/web/controller/FormComponentesController.class
 cic/javadiplo/appear/web/controller/HolaMundoController.class
+cic/javadiplo/appear/web/controller/proyecto/ProyectoController.class
 cic/javadiplo/appear/web/controller/CalculadoraController.class
 cic/javadiplo/appear/web/controller/EchoController.class
 cic/javadiplo/appear/web/controller/MensajesController.class
+cic/javadiplo/appear/web/controller/proyecto/NuevoProyectoController.class
 cic/javadiplo/appear/web/controller/HoraController.class

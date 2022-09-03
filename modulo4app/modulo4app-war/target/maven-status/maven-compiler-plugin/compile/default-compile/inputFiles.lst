@@ -1,6 +1,11 @@
-/home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/HolaMundoController.java
-/home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/MensajesController.java
-/home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/HoraController.java
-/home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/EchoController.java
-/home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/FormComponentesController.java
-/home/iliaco/Documentos/diploJava/modulo4/proyectos/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/CalculadoraController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/FormComponentesController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/jpa/ListaProductosController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/proyecto/ProyectoController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/MensajesController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/proyecto/ListaEmpProyectoController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/HolaMundoController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/CalculadoraController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/proyecto/NuevoProyectoController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/EchoController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/FlujoController.java
+/media/iliaco/Mordor/DiploJava/modulo4app/modulo4app-war/src/main/java/cic/javadiplo/appear/web/controller/HoraController.java

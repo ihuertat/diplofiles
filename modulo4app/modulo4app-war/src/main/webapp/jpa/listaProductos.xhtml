@@ -12,5 +12,35 @@
     <br/>
     <br/>
     Tamaño de listado de productos #{listaProductosController.productosLista.size()}
+    <h:dataTable id="tproductos" value="#{listaProductosController.productosLista}"
+                 var="producto">
+        <h:column>
+            <f:facet name="header">ID</f:facet>
+            <h:outputText value="#{producto.id}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">Nombre</f:facet>
+            <h:outputText value="#{producto.nombre}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">Descripción</f:facet>
+            <h:outputText value="#{producto.descripcion}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">Precio</f:facet>
+            <h:outputText value="#{producto.precio}"/>
+        </h:column>
+
+    </h:dataTable>
+
+    <h:form>
+        <br/>
+        <h:selectOneMenu id="opcionLista" value="#{listaProductosController.opcionMenu}" >
+            <f:selectItems value="#{listaProductosController.listaDepartamentos}"
+                            var="departamento" itemLabel="#{departamento.nombre}"
+                            itemValue="#{departamento.id}"/>
+        </h:selectOneMenu>
+        <br/>
+    </h:form>
 </h:body>
 </html>
