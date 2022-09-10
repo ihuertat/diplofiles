@@ -1,3 +1,12 @@
 .colortexto{
-    color : blue;
+    color : darkred;
+}
+
+.centrar{
+    text-align: center;
+}
+
+.centrartexto{
+    text-align: center;
+    border : 3px solid blue;
 }

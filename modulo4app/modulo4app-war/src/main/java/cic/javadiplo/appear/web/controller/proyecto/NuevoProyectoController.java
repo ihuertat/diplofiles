@@ -27,8 +27,9 @@ public class NuevoProyectoController implements Serializable {
 
     public String guardaProyecto(){
         logger.log(Level.INFO,"Id Antes de guardar : {0}",nuevo.getId());
-        nuevo = proyectoService.crear(nuevo);
-
+        try {
+            nuevo = proyectoService.crear(nuevo);
+        }catch (Exception e){}
         logger.log(Level.INFO,"Id proyecto nuevo asignado : {0}",nuevo.getId());
 
         return "/prime/listaProyectos?faces-redirect=true";

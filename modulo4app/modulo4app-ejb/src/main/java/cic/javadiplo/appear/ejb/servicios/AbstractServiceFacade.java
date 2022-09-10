@@ -1,5 +1,6 @@
 package cic.javadiplo.appear.ejb.servicios;
 
+import cic.javadiplo.appear.ejb.exception.SaveEntityException;
 import jakarta.persistence.EntityManager;
 
 public abstract class AbstractServiceFacade<T> {
@@ -10,10 +11,14 @@ public abstract class AbstractServiceFacade<T> {
         this.claseEntidad=claseEntidad;
     }
 
-    public T crear(T entidad){
-        EntityManager em = getEntityManager();
-        em.persist(entidad);
-        return entidad;
+    public T crear(T entidad) throws SaveEntityException {
+        try {
+            EntityManager em = getEntityManager();
+            em.persist(entidad);
+            return entidad;
+        }catch (Exception ex){
+            throw new SaveEntityException("Error al salvar entidad : "+ex.getMessage(),ex);
+        }
     }
 
     public T actualiza(T entidad){

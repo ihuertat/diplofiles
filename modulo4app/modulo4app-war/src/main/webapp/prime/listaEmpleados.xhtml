@@ -1,0 +1,40 @@
+<ui:composition template="/WEB-INF/template/plantilla.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:param name="titulo" value="Lista de Empleados" />
+    <ui:define name="contenido">
+        <p>
+            Página que utilizamos para gestionar empleados.
+        </p>
+        <f:view contentType="text/html" encoding="UTF-8">
+            <h:form id="frmListaEmpleados">
+                <p:menubar>
+                    <p:menuitem value="Nuevo" icon="pi pi-fw pi-plus"
+                                outcome="/prime/altaEmpleado.xhtml"/>
+                </p:menubar>
+                <p:growl id="mensages" />
+                <p:dataTable id="dtEmpleados" value="#{listaEmpleadosController.empleadoLista}"
+                             var="empleado">
+                    <p:column headerText="ID">
+                        <h:outputText value="#{empleado.id}" />
+                    </p:column>
+                    <p:column headerText="NOMBRE">
+                        <h:outputText value="#{empleado.nombre}" />
+                    </p:column>
+                    <p:column headerText="SALARIO">
+                        <h:outputText value="#{empleado.salario}" />
+                    </p:column>
+                    <p:column headerText="CORREO">
+                        <h:outputText value="#{empleado.correo}" />
+                    </p:column>
+                    <p:column headerText="Depto">
+                        <h:outputText value="#{empleado.departamento.nombre}" />
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+        </f:view>
+    </ui:define>
+</ui:composition>

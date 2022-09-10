@@ -24,6 +24,7 @@ public class EmpleadoServiceImp extends AbstractServiceFacade<EmpleadoEnt>
 
     @Override
     public List<EmpleadoEnt> listar() {
-        return em.createQuery("from EmpleadoEnt",EmpleadoEnt.class).getResultList();
+        String consulta = "select e from EmpleadoEnt e left join fetch e.departamento";
+        return em.createQuery(consulta,EmpleadoEnt.class).getResultList();
     }
 }

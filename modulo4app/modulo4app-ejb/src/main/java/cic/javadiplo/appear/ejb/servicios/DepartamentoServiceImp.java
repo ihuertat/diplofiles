@@ -28,4 +28,9 @@ public class DepartamentoServiceImp extends AbstractServiceFacade<DepartamentoEn
         Query qry = em.createQuery("from DepartamentoEnt",DepartamentoEnt.class);
         return qry.getResultList();
     }
+
+    @Override
+    public DepartamentoEnt getDepartamento(Integer id) {
+        return em.find(DepartamentoEnt.class,id);
+    }
 }

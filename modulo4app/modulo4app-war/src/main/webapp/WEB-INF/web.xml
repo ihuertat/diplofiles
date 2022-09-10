@@ -26,6 +26,50 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
+
+    <!--Definición de seguridad... -->
+    <!--Definición de formularios de login -->
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>diplojavaAplicationDomain</realm-name>
+        <form-login-config>
+            <form-login-page>/comun/login.html</form-login-page>
+            <form-error-page>/comun/errorLogin.html</form-error-page>
+        </form-login-config>
+    </login-config>
+    <!-- -->
+    <security-role>
+        <description>Definicion de rol 1</description>
+        <role-name>ROL1</role-name>
+    </security-role>
+    <security-role>
+        <description>Definicion de rol 2</description>
+        <role-name>ROL2</role-name>
+    </security-role>
+    <security-role>
+        <description>Definicion de rol 3</description>
+        <role-name>ROL3</role-name>
+    </security-role>
+    <!-- Restricciones de Seguridad -->
+    <security-constraint>
+        <display-name>URL comunes</display-name>
+        <web-resource-collection>
+            <web-resource-name>PaginasComunes</web-resource-name>
+            <description>Protección para las páginas comunes a todos los roles.</description>
+            <url-pattern>/basic/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>Roles con acceso a páginas comunes</description>
+            <role-name>ROL1</role-name>
+            <role-name>ROL2</role-name>
+            <role-name>ROL3</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <description>Sin encriptar</description>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>

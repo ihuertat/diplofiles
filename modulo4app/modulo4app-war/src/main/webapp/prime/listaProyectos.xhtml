@@ -12,7 +12,26 @@
     </h:head>
     <h:body>
         <h2 class="colortexto">Proyectos activos</h2>
+        <h:form id="sesion">
+
+            <p:menubar>
+            <p:submenu label="File" icon="pi pi-fw pi-file">
+                <p:submenu label="Salir" icon="pi pi-fw pi-plus">
+                    <p:menuitem value="Salir" icon="pi pi-fw pi-sign-out" action="#{sesionController.cerrarSesion}"/>
+                </p:submenu>
+                <p:menuitem value="Delete" icon="pi pi-fw pi-trash"/>
+                <p:divider />
+                <p:menuitem value="Export" icon="pi pi-fw pi-external-link"/>
+            </p:submenu>
+            </p:menubar>
+        </h:form>
+        <div>
+            <br/>
+            Bienvenido #{proyectoController.usuario}
+        <br/>
+        </div>
         <h:form>
+
             <p:commandButton icon="pi pi-plus" value="Nuevo"
                              action="#{proyectoController.nuevoProyecto}" />
             <p:dataTable var="proyecto" value="#{proyectoController.listaProyectos}">
